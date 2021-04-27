@@ -6,9 +6,7 @@ file = 'CryptoWalletRecorderConfig.ini'
 config = ConfigParser()
 config.read(file)
 
-
 from google.oauth2.service_account import Credentials
-#import pandas as pd
 scope = ['https://www.googleapis.com/auth/spreadsheets',
         'https://www.googleapis.com/auth/drive']
 creds = Credentials.from_service_account_file(config['GOOGLE_SHEET']['service_account_file_path'], scopes=scope)

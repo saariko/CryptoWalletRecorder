@@ -1,6 +1,6 @@
 # CryptoWalletRecorder
 
-This python script, will take your total balance, and update it into an excel or google sheet.
+This python script, will take your total balance, and update it into a local excel file or google sheet.
 
 Working with a local excel file is simpler.
 
