@@ -2,12 +2,12 @@
 
 import json
 import datetime
-currDate = datetime.datetime.now().date()
+import os
+#currDate = datetime.datetime.now().date()
 
 from configparser import ConfigParser
 config = ConfigParser()
 
-import os
 # verify config file exists. if not create it
 file = 'CryptoWalletRecorderConfig.ini'
 
@@ -17,13 +17,13 @@ if os.path.isfile('./' + file) == False:
     config.add_section('EXCHANGE')
     config.set('EXCHANGE', 'exchange', 'binance')
     config.set('EXCHANGE', 'base_currency', 'USDT')
-    config.set('EXCHANGE', 'api_key', '')
-    config.set('EXCHANGE', 'api_secret', '')
+    config.set('EXCHANGE', 'api_key', '########################')
+    config.set('EXCHANGE', 'api_secret', '########################')
     config.add_section('OUTPUT')
     config.set('OUTPUT', 'output_medium', 'excel')
     config.add_section('GOOGLE_SHEET')
     config.set('GOOGLE_SHEET', 'service_account_file_path', 'D:\My Downloads\client_secret.json')
-    config.set('GOOGLE_SHEET', 'file_name', 'spreadsheet1')
+    config.set('GOOGLE_SHEET', 'file_name', 'MyCryptoWalletPerformance')
     config.add_section('EXCEL_SHEET')
     config.set('EXCEL_SHEET', 'file_name', 'Wallet_Value.xlsx')
 
