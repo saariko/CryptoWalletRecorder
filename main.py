@@ -11,6 +11,7 @@ config = ConfigParser()
 # verify config file exists. if not create it
 file = 'CryptoWalletRecorderConfig.ini'
 
+# First run - check if CryptoWalletRecorderConfig.ini file exists
 if os.path.isfile('./' + file) == False:
     # create initial Config file
     print('config file is missing - creating')
@@ -33,7 +34,6 @@ if os.path.isfile('./' + file) == False:
 
 config.read(file)
 
-# First run - check if CryptoWalletRecorderConfig.ini file exists
 
 BASE_CURRENCY = config['EXCHANGE']['base_currency']
 API_KEY = config['EXCHANGE']['api_key']
